@@ -34,4 +34,5 @@ class TestLogin:
         LoginPage(prepara_env).Login(item['username'], item['pwd'], item['code'])
         assert item['excepted'] == LoginPage(prepara_env).get_error()
 
-
+    def test_failed(self):
+        assert  1!=1

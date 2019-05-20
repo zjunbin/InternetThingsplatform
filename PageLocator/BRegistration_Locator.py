@@ -44,3 +44,7 @@ class BRegistration_Locator:
     determine = (By.XPATH, "// button[text() = '确定")
     #登记成功
     successful = (By.XPATH,"//div[text()='添加成功!']")
+    # 无数据提示
+    null_message = (By.XPATH,"//div[@id='massage']")
+    # 空数据提示
+    error_message = (By.XPATH,"//td[text()='当前没有车辆信息']")
