@@ -12,7 +12,7 @@ log_path = os.path.join(path,'logs')
 case_path= os.path.join(path,'cases')
 html_name = time.strftime('%Y%m%d',time.localtime(time.time())) + '_report.html'
 result_path = os.path.join(path,'report','report.html')
-screenshot_path = os.path.join(path,'output/screenshot')
+screenshot_path = os.path.join(path,'output/screenshot/')
 if __name__ == '__main__':
     import datetime ,time
     s = datetime.datetime.now()

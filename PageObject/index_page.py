@@ -44,3 +44,21 @@ class IndexPage:
             return True
         except:
             return False
+
+    # 接警警员密码验证页面
+    def alarm_User_Authentication_Exists(self):
+        try:
+            WebDriverWait(self.driver, 10).until(
+                ec.visibility_of_element_located((By.XPATH, "//div[text()='身份确认']")))
+            return True
+        except:
+            return False
+
+    # 接警警员密码验证页面
+    def alarm_twopage_Exists(self):
+        try:
+            WebDriverWait(self.driver, 10).until(
+                ec.visibility_of_element_located((By.XPATH, "//div[@class='stepText']")))
+            return True
+        except:
+            return False

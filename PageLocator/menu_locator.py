@@ -6,9 +6,8 @@
 from selenium.webdriver.common.by import By
 
 class Menu:
-
-    # 接警菜单
-    alarm_menu = (By.XPATH, "//div[@id='divMenu_Icon']//a[@rel='221']")
+    # 更多功能菜单
+    mor = (By.XPATH, "//img[@id='morefun']")
     # 车辆登记菜单
     registration_menu = (By.XPATH, "//div[@id='divMenu_Icon']//a[@rel='251']")
     # 车辆管理菜单
@@ -17,3 +16,9 @@ class Menu:
     organization_menu = (By.XPATH, "//div[@id='divMenu_Icon']//a[@rel='411']")
     # 警员管理菜单
     PoliceOfficer_menu = (By.XPATH, "//div[@id='divMenu_Icon']//a[@rel='412']")
+    # 接警理菜单
+    Alarm_menu = (By.XPATH, "//div[@id='divMenu_Icon']//a[@rel='221']")
+    # 案件管理菜单
+    Case_management_menu = (By.XPATH, "//div[@id='divMenu_Icon']//a[@rel='223']")
+    # 重点人口追踪菜单
+    Population_tracking_menu = (By.XPATH, "//div[@id='divMenu_Icon']//a[@rel='122']")

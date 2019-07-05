@@ -6,5 +6,5 @@
 
 import pytest
 
-pytest.main(["--html=output/res.html","--alluredir=output/my_reports","--reruns","2"
+pytest.main(["--html=output/res.html","--alluredir=output/my_reports","--reruns","2",
              "--reruns-delay","5"])

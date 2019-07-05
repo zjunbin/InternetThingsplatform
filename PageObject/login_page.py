@@ -14,7 +14,6 @@ class LoginPage(BasePage):
     def Login(self,username,password,code):
         self.wait_element_Visible(loc.user_name,model_name='登录页面输入框')
         # WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located(loc.user_name))
-        time.sleep(0.5)
         # self.driver.find_element(*loc.user_name).send_keys(username)
         # self.driver.find_element(*loc.user_pwd).send_keys(password)
         # self.driver.find_element(*loc.user_code).send_keys(code)

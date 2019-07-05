@@ -6,6 +6,8 @@
 import pytest
 from selenium import webdriver
 from Testdatas import common_data as cd
+from  PageObject.login_page import LoginPage
+from Testdatas import login_datas as ld
 
 driver = None
 
@@ -33,3 +35,22 @@ def prepara_env():
     # 后置条件
     driver.quit()
 
+
+@pytest.fixture(scope='class')
+def global_login():
+    global driver
+    # 前置条件
+    driver = webdriver.Chrome(service_log_path=r"D:\ChromeLog\log.log")
+    driver.maximize_window()
+    driver.get(cd.login_url)
+    LoginPage(driver).Login(ld.success_data['username'], ld.success_data['pwd'], ld.success_data['code'])
+    yield driver  # 分隔符
+    # 后置条件
+    driver.quit()
+
+
+@pytest.fixture
+def global_page():
+
+    yield
+    driver.refresh()
